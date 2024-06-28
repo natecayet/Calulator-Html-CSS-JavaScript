@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    border: 3px solid;
+    border-radius: 5px;
+    width: 210px;
+    margin: 5px;
+    background-color: rgb(72, 67, 67);
+}
+
+#calculator-screen {
+    border: 2px solid;
+    border-radius: 5px;
+    height: 70px;
+    width: 200px;
+    margin: 5px auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: rgb(243, 237, 237);
+}
+
+#numbers-text {
+    width: 200px;
+    max-height: 45px;
+    text-align: right;
+    overflow-y: scroll;
+}
+
+#numbers-text, #operator-text {
+    margin: 0 5px 0 5px;
+    font-size: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#number-btns-grid {
+    display: grid;
+    grid-template-rows: repeat(5, 50px);
+    grid-template-columns: repeat(4, 50px);
+    justify-content: center;
+    margin: 0 0 5px 0;
+    grid-template-areas:
+    "   clear       clear       divide       .   "
+    "   .       .       .       .   "
+    "   .       .       .       .   "
+    "   .       .       .       equals   "
+    "   .       .       .       equals   ";
+}
+
+#equals-button {
+    grid-area: equals;
+}
+
+#clear-button {
+    grid-area: clear;
+}
+
+#divide {
+    grid-area: divide;
+}
+
+#multiply {
+    grid-row: 1;
+    grid-column: 4;
+}
+
+#subtract {
+    grid-row: 2;
+    grid-column: 4;
+}
+
+#add {
+    grid-row: 3;
+    grid-column: 4;
+}
